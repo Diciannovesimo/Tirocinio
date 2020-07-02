@@ -1,0 +1,86 @@
+1,Tully,298,Battle of the Golden Tooth,defender
+2,Baratheon,298,Battle at the Mummer's Ford,defender
+3,Tully,298,Battle of Riverrun,defender
+4,Lannister,298,Battle of the Green Fork,defender
+5,Lannister,298,Battle of the Whispering Wood,defender
+6,Lannister,298,Battle of the Camps,defender
+7,Darry,298,Sack of Darry,defender
+8,Stark,299,Battle of Moat Cailin,defender
+9,Stark,299,Battle of Deepwood Motte,defender
+10,Stark,299,Battle of the Stony Shore,defender
+11,Greyjoy,299,Battle of Torrhen's Square,defender
+12,Stark,299,Battle of Winterfell,defender
+13,Stark,299,Sack of Torrhen's Square,defender
+14,Stark,299,Sack of Winterfell,defender
+15,Lannister,299,Battle of Oxcross,defender
+16,Baratheon,299,Siege of Storm's End,defender
+17,Tully,299,Battle of the Fords,defender
+18,Lannister,299,Sack of Harrenhal,defender
+19,Lannister,299,Battle of the Crag,defender
+20,Lannister,299,Battle of the Blackwater,defender
+21,Lannister,299,Siege of Darry,defender
+22,Lannister,299,Battle of Duskendale,defender
+23,Brave Companions,299,Battle of the Burning Septry,defender
+24,Stark,299,Battle of the Ruby Ford,defender
+25,Brave Companions,299,Retaking of Harrenhal,defender
+26,Stark,299,The Red Wedding,defender
+27,Mallister,299,Siege of Seagard,defender
+28,Night's Watch,300,Battle of Castle Black,defender
+28,Baratheon,300,Battle of Castle Black,defender
+29,Greyjoy,300,Fall of Moat Cailin,defender
+31,Greyjoy,300,Retaking of Deepwood Motte,defender
+32,Tyrell,300,Battle of the Shield Islands,defender
+33,The Reach,300,Invasion of Ryamsport,defender
+34,Baratheon,300,Second Seige of Storm's End,defender
+35,Baratheon,300,Siege of Dragonstone,defender
+36,Tully,300,Siege of Riverrun,defender
+37,Blackwood,300,Siege of Raventree,defender
+1,Lannister,298,Battle of the Golden Tooth,attacker
+2,Lannister,298,Battle at the Mummer's Ford,attacker
+3,Lannister,298,Battle of Riverrun,attacker
+4,Stark,298,Battle of the Green Fork,attacker
+5,Stark,298,Battle of the Whispering Wood,attacker
+5,Tully,298,Battle of the Whispering Wood,attacker
+6,Stark,298,Battle of the Camps,attacker
+6,Tully,298,Battle of the Camps,attacker
+7,Lannister,298,Sack of Darry,attacker
+8,Greyjoy,299,Battle of Moat Cailin,attacker
+9,Greyjoy,299,Battle of Deepwood Motte,attacker
+10,Greyjoy,299,Battle of the Stony Shore,attacker
+11,Stark,299,Battle of Torrhen's Square,attacker
+12,Greyjoy,299,Battle of Winterfell,attacker
+13,Greyjoy,299,Sack of Torrhen's Square,attacker
+14,Bolton,299,Sack of Winterfell,attacker
+14,Greyjoy,299,Sack of Winterfell,attacker
+15,Stark,299,Battle of Oxcross,attacker
+15,Tully,299,Battle of Oxcross,attacker
+16,Baratheon,299,Siege of Storm's End,attacker
+17,Lannister,299,Battle of the Fords,attacker
+18,Stark,299,Sack of Harrenhal,attacker
+19,Stark,299,Battle of the Crag,attacker
+20,Baratheon,299,Battle of the Blackwater,attacker
+21,Darry,299,Siege of Darry,attacker
+22,Stark,299,Battle of Duskendale,attacker
+23,Brotherhood without Banners,299,Battle of the Burning Septry,attacker
+24,Lannister,299,Battle of the Ruby Ford,attacker
+25,Lannister,299,Retaking of Harrenhal,attacker
+26,Frey,299,The Red Wedding,attacker
+26,Bolton,299,The Red Wedding,attacker
+27,Frey,299,Siege of Seagard,attacker
+28,Free folk,300,Battle of Castle Black,attacker
+28,Thenns,300,Battle of Castle Black,attacker
+28,Giants,300,Battle of Castle Black,attacker
+29,Bolton,300,Fall of Moat Cailin,attacker
+30,Brave Companions,300,Sack of Saltpans,attacker
+31,Baratheon,300,Retaking of Deepwood Motte,attacker
+31,Karstark,300,Retaking of Deepwood Motte,attacker
+31,Mormont,300,Retaking of Deepwood Motte,attacker
+31,Glover,300,Retaking of Deepwood Motte,attacker
+32,Greyjoy,300,Battle of the Shield Islands,attacker
+33,Tyrell,300,Invasion of Ryamsport,attacker
+34,Baratheon,300,Second Seige of Storm's End,attacker
+35,Baratheon,300,Siege of Dragonstone,attacker
+36,Lannister,300,Siege of Riverrun,attacker
+36,Frey,300,Siege of Riverrun,attacker
+37,Bracken,300,Siege of Raventree,attacker
+37,Lannister,300,Siege of Raventree,attacker
