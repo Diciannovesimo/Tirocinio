@@ -21,9 +21,15 @@ file = open('author.csv' , 'w' , encoding='utf8')
 for paper in author['papers']:
 
     count+=1
-    CSVstring = str(count) + "," + name + "," + str(paper['year']) + "," + str(paper['title']) + "," + str(paper['paperId'])
-    print(CSVstring)
+    CSVstring = str(count) + "," + name + "," + str(paper['year']) + "," + str(paper['title'])
     file.write(CSVstring)
+
+    paper = sch.paper(paper['paperId'])
+    for author in paper['authors']:
+        if(str(author['name']) != name):
+            file.write("\n")
+            CSVstring = str(count) + "," + str(author['name']) + "," + str(paper['year']) + "," + str(paper['title'])
+            file.write(CSVstring)
 
     if(count > MAX-1):
         break
@@ -31,3 +37,8 @@ for paper in author['papers']:
     file.write("\n")
 
 file.close()
+
+
+#for author in paper['authors']:
+#    print(author['name'])
+#    print(author['authorId'])
