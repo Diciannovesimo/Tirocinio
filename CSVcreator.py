@@ -1,4 +1,3 @@
-import sys
 import semanticscholar as sch
 
 print("Script Python")
@@ -12,8 +11,8 @@ file:       the csv file
 CSVstring:  string to write to the CSV file
 """
 count = 0
-MAX = int(sys.argv[1])
-author = sch.author(sys.argv[2])
+MAX = 78
+author = sch.author('2262347')
 name = author['name']
 CSVstring = ""
 file = open('author.csv' , 'w' , encoding='utf8')
@@ -38,7 +37,19 @@ for paper in author['papers']:
 
 file.close()
 
+import time
+from selenium import webdriver
 
-#for author in paper['authors']:
-#    print(author['name'])
-#    print(author['authorId'])
+options = webdriver.ChromeOptions()
+options.add_argument("--start-maximized")
+driver = webdriver.Chrome(options=options)
+
+driver.get("http://www.di.uniba.it/~buono/paohvis/paoh.html")
+time.sleep(2)
+
+input_file = driver.find_element_by_xpath('//*[@id="inputFileOpen"]')
+input_file.send_keys("D:/github/Tirocinio/author.csv")
+time.sleep(2)
+
+button = driver.find_element_by_xpath('//*[@id="btnheatmapbsp"]/span')
+button.click()
