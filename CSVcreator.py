@@ -1,25 +1,39 @@
 import semanticscholar as sch
+import time
+from selenium import webdriver
 
 print("Analisi di rilevanza di articoli scientifici mediante visualizzazioni")
 """
 variable declarations
-count:      for the csv file
-MAX:        for numbers of papers that the user want to view
-author:     select an author in the semantic scholar database
-name:       author name
-file:       the csv file
-CSVstring:  string to write to the CSV file
+count:         for the csv file
+numbers_paper: for numbers of papers that the user want to view
+MAX:           number of documents the author has written
+author:        select an author in the semantic scholar database
+name:          author name
+file:          the csv file
+CSVstring:     string to write to the CSV file
 """
 print("inserisci l'id dell'autore che si vuole analizzare")
 print("esempio: Turing 2262347")
+
 number_auth = input()
 author = sch.author(number_auth)
+try:
+    MAX = int(len(author['papers']))
+    pass
+except KeyError:
+    print("Numero autore non valido: " + number_auth)
+    print("Il programma verrà interrotto...")
+    time.sleep(3)
+    exit()
+
 
 print("quanti documenti scientifici vuoi analizzare?")
-print("documenti totali di questo autore: " + str(len(author['papers'])))
-MAX = int(input())
-if(MAX < 0):
-    MAX = int(len(author['papers']))
+print("documenti totali di questo autore: " + str(MAX))
+numbers_paper = int(input())
+if(numbers_paper < 0 or numbers_paper > MAX):
+    print("Numero non valido, verranno analizzati tutti i documenti")
+    numbers_paper = MAX
 
 count = 0
 name = author['name']
@@ -41,17 +55,13 @@ for paper in author['papers']:
             file.write(CSVstring)
 
     print("Analisi documento numero: " + str(count))
-    if(count > MAX-1):
+    if(count > numbers_paper-1):
         print("Analisi completata")
         break
 
     file.write("\n")
 
 file.close()
-
-
-import time
-from selenium import webdriver
 
 """
 variable declarations
