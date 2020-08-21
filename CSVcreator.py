@@ -65,8 +65,8 @@ file.close()
 
 """
 variable declarations
-option:
-driver:
+option:     for optimize the windows that will be opened
+driver:     to get url and elements of the site, which will be used
 time:       waiting time between calls
 input_file: csv file
 button:     element of the paohvis site
