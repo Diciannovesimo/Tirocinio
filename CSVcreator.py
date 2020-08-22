@@ -38,28 +38,40 @@ if(numbers_paper < 0 or numbers_paper > MAX):
 count = 0
 name = author['name']
 CSVstring = ""
-file = open('author.csv' , 'w' , encoding='utf8')
+auth_name_file = number_auth + '_' + name + '_author.csv'
+file = open( number_auth + '_' + name + '_author.csv' , 'w' , encoding='utf8')
 
 print("Analisi in corso...")
 for paper in author['papers']:
 
-    count+=1
-    CSVstring = str(count) + "," + name + "," + str(paper['year']) + "," + str(paper['title'])
-    file.write(CSVstring)
+    paper_year = paper['year']
+    if(paper_year != None):
+        paper_title = str(paper['title'])
+        paper_title = paper_title.replace(',','').replace('.','')
 
-    paper = sch.paper(paper['paperId'])
-    for author in paper['authors']:
-        if(str(author['name']) != name):
-            file.write("\n")
-            CSVstring = str(count) + "," + str(author['name']) + "," + str(paper['year']) + "," + str(paper['title'])
-            file.write(CSVstring)
+        count+=1
+        CSVstring = str(count) + "," + name + "," + str(paper_year) + "," + paper_title
+        file.write(CSVstring)
 
-    print("Analisi documento numero: " + str(count))
-    if(count > numbers_paper-1):
-        print("Analisi completata")
-        break
+        paper = sch.paper(paper['paperId'])
+        for author in paper['authors']:
+            if(str(author['name']) != name):
+                file.write("\n")
+                CSVstring = str(count) + "," + str(author['name']) + "," + str(paper_year) + "," + paper_title
+                file.write(CSVstring)
 
-    file.write("\n")
+        print("Analisi documento numero: " + str(count))
+        if(count > numbers_paper-1):
+            print("Analisi completata")
+            break
+
+        file.write("\n")
+    else:
+        print("Questo documento: " + str(paper['title']) + " ha una data invalida")
+        count+=1
+        if(count > numbers_paper-1):
+            print("Analisi completata")
+            break
 
 file.close()
 
@@ -81,7 +93,7 @@ driver.get("http://www.di.uniba.it/~buono/paohvis/paoh.html")
 time.sleep(1)
 
 input_file = driver.find_element_by_xpath('//*[@id="inputFileOpen"]')
-input_file.send_keys("D:/github/Tirocinio/author.csv")
+input_file.send_keys("D:/github/Tirocinio/" + auth_name_file)
 time.sleep(1)
 
 button = driver.find_element_by_xpath('//*[@id="btnheatmapbsp"]/span')
