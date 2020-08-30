@@ -2,7 +2,7 @@ import sys
 import semanticscholar as sch
 # autore
 print("Script Python")
-author = sch.author(sys.argv[1])
+author = sch.author("2262347")
 
 file = open('autore.txt' , 'w' , encoding='utf8')
 
@@ -13,7 +13,7 @@ file.write("\nPUBBLICAZIONI DELL'AUTORE: " + str(author['papers']))
 file.write("\n" + str(len(author['papers'])))
 file.write("\n------------------------------------------------------")
 # documento
-paper = sch.paper(sys.argv[2])
+paper = sch.paper("1bb2114c24263b0489f24f787fef86f33487f802")
 file.write("\n" + str(paper.keys()))
 file.write("\nTITOLO DOCUMENTO: " + str(paper['title']))
 file.write("\n------------------------------------------------------")

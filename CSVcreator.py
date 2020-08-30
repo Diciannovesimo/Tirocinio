@@ -58,7 +58,7 @@ for paper in author['papers']:
         paper = sch.paper(paper['paperId'])
         team = "team_" + str(count)
         for author in paper['authors']:
-            if(str(author['name']) != name):
+            if(str(author['authorId']) != iD_auth):
                 file.write("\n")
                 CSVstring = str(count) + "," + str(author['name']) + "," + str(paper_year) + "," + paper_title + "," + team
                 file.write(CSVstring)
