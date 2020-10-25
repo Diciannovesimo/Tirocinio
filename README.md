@@ -8,18 +8,15 @@ Come configurare il programma
     pip install semanticscholar
     pip install selenium
     pip install webdriver_manager
-
-3 - oltre ad installare la libreria selenium servirà un eseguibile per avviare chrome disponibile al seguente link : https://chromedriver.storage.googleapis.com/index.html?path=86.0.4240.22/
-
-per altri browser consultare questo link : https://pypi.org/project/selenium/
-
-4 - Dopo aver scaricato lo zip estrarre il contenuto nella stessa cartella dove risiede il file CSVcreator.py
     
 Nel programma:
 
-5 - sostituire nella riga 103 il percorso, inserendo al posto di "D:/github/Tirocinio/" il proprio
+3 - se si usano browser diversi da Chrome, cambiare nel programma la riga 4 con una delle classi disponibili in questo link:
+https://github.com/rasjani/webdrivermanager#classes
+
+4 - sostituire nella riga 103 il percorso, inserendo al posto di "D:/github/Tirocinio/" il proprio
 dove risiede il file CSVcreator.py
 
 es. "C:/miopercorso/github/Tirocinio/"
     
-6- Avviare il programma tramite cmd (terminale) con il comando python miopercorso/CSVcreator.py
+5- Avviare il programma tramite cmd (terminale) con il comando python miopercorso/CSVcreator.py
