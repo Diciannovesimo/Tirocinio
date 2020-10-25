@@ -19,6 +19,7 @@ Nel programma:
 
 5 - sostituire nella riga 103 il percorso, inserendo al posto di "D:/github/Tirocinio/" il proprio
 dove risiede il file CSVcreator.py
+
 es. "C:/miopercorso/github/Tirocinio/"
     
 6- Avviare il programma tramite cmd (terminale) con il comando python miopercorso/CSVcreator.py
