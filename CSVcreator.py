@@ -1,6 +1,7 @@
 import semanticscholar as sch
 import time
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 
 print("Analisi di rilevanza di articoli scientifici mediante visualizzazioni")
 """
@@ -94,7 +95,7 @@ print("apertura del sito paohvis in corso...")
 time.sleep(2)
 options = webdriver.ChromeOptions()
 options.add_argument("--start-maximized")
-driver = webdriver.Chrome(options=options)
+driver = webdriver.Chrome(ChromeDriverManager().install())
 
 driver.get("http://www.di.uniba.it/~buono/paohvis/paoh.html")
 time.sleep(2)
